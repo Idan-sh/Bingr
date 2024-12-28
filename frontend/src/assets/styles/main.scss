@@ -1,0 +1,62 @@
+@use "setup/typography";
+@use "variables/index" as vars;
+
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: vars.$mainBgColor;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: vars.$mainFont;
+  font-weight: 300;
+  font-size: vars.$mainFontSize;
+  line-height: 1.5em;
+  height: 100%;
+
+  direction: ltr;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  color: vars.$secondaryFontColor;
+  background-color: #434343;
+
+  &:hover {
+    background-color: #808080;
+    transition: background-color 0.3s ease;
+  }
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 160%;
+  font-weight: 600;
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 160%;
+}
+
+@media only screen and (max-width: 768px) {
+  $mainFontSize: 14px;
+
+  body {
+    font-size: vars.$mainFontSize;
+  }
+}
