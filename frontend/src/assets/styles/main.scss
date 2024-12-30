@@ -4,7 +4,7 @@
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: vars.$mainBgColor;
+  background-color: vars.$darkBgColor;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,9 +14,12 @@
 
 body {
   margin: 0;
+
   font-family: vars.$mainFont;
   font-weight: 300;
   font-size: vars.$mainFontSize;
+  color: vars.$lightFontColor;
+
   line-height: 1.5em;
   height: 100%;
 
@@ -45,7 +48,7 @@ button {
 h1 {
   letter-spacing: 2px;
   font-size: 160%;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {

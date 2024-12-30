@@ -1,21 +1,16 @@
+// ** Background Colors **
+$darkBgColor: #232323; // Off White: #faf9f6, Ghost White: #f8f8ff
+$lightBgColor: #d9d7ce;
+
+// ** Main Theme Colors **
+$mainThemeColor1: rgb(9, 103, 231);
+$mainThemeColor2: rgb(255, 0, 132);
+
 // ** Main Colors **
 $errorColor: rgb(117, 26, 26);
 
 // ** Font Colors **
-$mainFontColor: black;
+$darkFontColor: $darkBgColor;
+$lightFontColor: $lightBgColor;
 $secondaryFontColor: white;
-$highlightFontColor: rgb(23, 100, 97);
 $errorFontColor: red;
-
-// ** Background Colors **
-$mainBgColor: #242424; // Off White: #faf9f6, Ghost White: #f8f8ff
-$seconaryBgColor: #fff;
-$headerBgColor: rgb(0, 16, 23);
-
-// ** Components Colors **
-$backButtonBgColor: rgb(226, 62, 62);
-
-// ** Button Colors **
-$btnColor: #6b6b6b;
-$greenBtnColor: #28a745;
-$redBtnColor: #e73939;
