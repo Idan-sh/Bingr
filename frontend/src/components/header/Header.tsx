@@ -38,7 +38,7 @@ function Header() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: theme.palette.background.default }} position="static">
+    <AppBar sx={{ backgroundColor: "background.default" }} position="static">
       <Container sx={{ paddingBlock: "0.3rem" }} maxWidth="xl">
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
@@ -50,7 +50,7 @@ function Header() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="info"
             >
               <MenuIcon />
             </IconButton>
@@ -72,7 +72,9 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
+                  <Typography sx={{ textAlign: "center", color: "text.secondary" }}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -118,7 +120,9 @@ function Header() {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: "center", color: "text.secondary" }}>
+                    {setting}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>

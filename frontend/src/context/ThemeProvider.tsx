@@ -19,7 +19,7 @@ interface AppThemeProviderProps {
 
 // Provider component
 export const AppThemeProvider = ({ children }: AppThemeProviderProps) => {
-  const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("dark");
+  const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
 
   const toggleTheme = () => {
     setCurrentTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
