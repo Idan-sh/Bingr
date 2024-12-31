@@ -1,18 +1,19 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./assets/styles/main.scss";
-import { ScreenSizeProvider } from "./context/ScreenSizeProvider.tsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage.tsx";
+import Header from "./components/header/Header.tsx";
+import { AppThemeProvider } from "./context/ThemeProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ScreenSizeProvider>
+    <AppThemeProvider>
       <BrowserRouter>
+        <Header />
         <Routes>
           <Route path="/*" element={<LandingPage />} />
         </Routes>
       </BrowserRouter>
-    </ScreenSizeProvider>
+    </AppThemeProvider>
   </StrictMode>
 );

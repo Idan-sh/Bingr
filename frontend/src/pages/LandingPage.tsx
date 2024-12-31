@@ -1,7 +1,9 @@
-import "/src/assets/styles/pages/_LandingPage.scss";
-
 function LandingPage() {
-  return <section className="landing-page">Bingr</section>;
+  return (
+    <section className="landing-page">
+      <h1>Bingr</h1>
+    </section>
+  );
 }
 
 export default LandingPage;
