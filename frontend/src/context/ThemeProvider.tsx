@@ -7,7 +7,7 @@ import { mainColorsTheme } from "../themes/MainColorsTheme";
 // Define the shape of the context value
 interface ThemeContextType {
   currentTheme: "light" | "dark";
-  toggleTheme: () => void;
+  toggleTheme: () => void,
 }
 
 // Create the context, initializing with `undefined`

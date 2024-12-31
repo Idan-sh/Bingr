@@ -2,12 +2,13 @@ import { Box, Typography, useTheme } from "@mui/material";
 
 interface HeaderLogoProps {
   display?: { xs?: string; sm?: string; md?: string; lg?: string; xl?: string };
+  flexGrow?: 1 | 0;
 }
-function HeaderLogo({ display }: HeaderLogoProps) {
+function HeaderLogo({ display, flexGrow }: HeaderLogoProps) {
   const theme = useTheme();
 
   return (
-    <Box sx={{ display: display, gap: "0.6rem", alignItems: "center" }}>
+    <Box sx={{ display: display, gap: "0.6rem", alignItems: "center", flexGrow: flexGrow }}>
       <Box sx={{ display: "flex", gap: "0.3rem" }}>
         <Box
           sx={{
@@ -36,7 +37,6 @@ function HeaderLogo({ display }: HeaderLogoProps) {
         sx={{
           mr: 2,
           display: display,
-          flexGrow: 1,
           fontWeight: 700,
           letterSpacing: "0rem",
           textDecoration: "none"

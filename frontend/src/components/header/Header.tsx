@@ -12,13 +12,12 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import HeaderLogo from "./HeaderLogo";
-import { useTheme } from "@mui/material";
+import ThemeToggleButton from "./ThemeToggleButton";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
-  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -80,7 +79,7 @@ function Header() {
             </Menu>
           </Box>
 
-          <HeaderLogo display={{ xs: "flex", sm: "flex", md: "none" }} />
+          <HeaderLogo flexGrow={1} display={{ xs: "flex", sm: "flex", md: "none" }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -95,6 +94,8 @@ function Header() {
               </Button>
             ))}
           </Box>
+
+          <ThemeToggleButton />
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
