@@ -21,7 +21,10 @@ export const lightTheme = createTheme({
     background: {
         default: "#d9d7ce",
         paper: "#232323"
-    }
+    },
+    action: {
+      hover: "rgba(0, 0, 0, 0.08)",
+    },
   },
   typography: {
     allVariants: {
@@ -30,5 +33,16 @@ export const lightTheme = createTheme({
     button: {
       textTransform: "uppercase", 
     },
-  }
+  },
+  components: {
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            backgroundColor: "rgba(0, 0, 0, 0.08)",
+          },
+        },
+      },
+    },
+  },
 });

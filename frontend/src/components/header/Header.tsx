@@ -42,7 +42,7 @@ function Header() {
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
 
-          <Box sx={{ flexGrow: 1, display: { sm: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "flex", sm: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -53,6 +53,7 @@ function Header() {
             >
               <MenuIcon />
             </IconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -88,7 +89,12 @@ function Header() {
                 color="info"
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ display: "block" }}
+                sx={{
+                  display: "block",
+                  "&:hover": {
+                    backgroundColor: "action.hover"
+                  }
+                }}
               >
                 {page}
               </Button>

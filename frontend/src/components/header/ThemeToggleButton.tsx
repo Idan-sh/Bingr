@@ -6,7 +6,7 @@ function ThemeToggleButton() {
   const { toggleTheme, currentTheme } = useAppTheme();
 
   return (
-    <IconButton sx={{ mr: "0.5rem" }} onClick={toggleTheme} color="primary">
+    <IconButton sx={{ mr: "0.5rem" }} onClick={toggleTheme}>
       {currentTheme === "dark" ? <LightMode color="info" /> : <DarkMode color="info" />}
     </IconButton>
   );
