@@ -1,8 +1,11 @@
+import { Container } from "@mui/material";
+import constructionIcon from "/imgs/building.png";
+
 function LandingPage() {
   return (
-    <section className="landing-page">
-      <h1>Bingr</h1>
-    </section>
+    <Container maxWidth="md" sx={{ display: "flex", justifyContent: "center", paddingTop: "5rem" }}>
+      <img width="30%" src={constructionIcon} />
+    </Container>
   );
 }
 
