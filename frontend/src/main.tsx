@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage.tsx";
 import Header from "./components/header/Header.tsx";
 import { AppThemeProvider } from "./context/ThemeProvider.tsx";
+import "./assets/styles/setup/main.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

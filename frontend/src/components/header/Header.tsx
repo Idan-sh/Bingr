@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <AppBar sx={{ backgroundColor: "background.default" }} position="static">
-      <Container sx={{ paddingBlock: "0.3rem" }} maxWidth="xl">
+      <Container sx={{ paddingBlock: "0.1rem" }} maxWidth="xl">
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
 
@@ -72,7 +72,9 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center", color: "text.secondary" }}>
+                  <Typography
+                    sx={{ textAlign: "center", fontSize: "1rem", color: "text.secondary" }}
+                  >
                     {page}
                   </Typography>
                 </MenuItem>
@@ -90,6 +92,7 @@ function Header() {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{
+                  fontSize: "1rem",
                   display: "block",
                   "&:hover": {
                     backgroundColor: "action.hover"

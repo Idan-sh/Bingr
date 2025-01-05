@@ -37,8 +37,9 @@ function HeaderLogo({ display, flexGrow }: HeaderLogoProps) {
         sx={{
           mr: 2,
           display: display,
-          fontWeight: 700,
-          letterSpacing: "0rem",
+          fontSize: "2.4rem",
+          fontWeight: 900,
+          letterSpacing: "-0.08rem",
           textDecoration: "none"
         }}
       >
