@@ -1,5 +1,5 @@
 html {
-  font-size: clamp(12px, 1.2vw, 22px);
+  font-size: clamp(12px, 1.2vw, 16px);
 
   @media (max-width: 900px) {
     font-size: clamp(14px, 1.8vw, 30px);

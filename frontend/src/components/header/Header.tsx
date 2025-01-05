@@ -8,14 +8,13 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import HeaderLogo from "./HeaderLogo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import "/src/assets/styles/components/header.scss";
 
-const pages = ["Products", "Pricing", "Blog"];
+const pages = ["Swipe", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
@@ -84,23 +83,27 @@ function Header() {
 
           <HeaderLogo flexGrow={1} display={{ xs: "flex", sm: "flex", md: "none" }} />
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ ml: 4, flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                variant="text"
+              <Typography
+                variant="h2"
+                noWrap
+                component="a"
                 color="info"
                 key={page}
                 onClick={handleCloseNavMenu}
+                href={`/${page}`}
                 sx={{
-                  fontSize: "1rem",
-                  display: "block",
-                  "&:hover": {
-                    backgroundColor: "action.hover"
-                  }
+                  mr: 6,
+                  display: "inline",
+                  fontSize: "1.1rem",
+                  fontWeight: 400,
+                  textDecoration: "none",
+                  textTransform: "uppercase"
                 }}
               >
                 {page}
-              </Button>
+              </Typography>
             ))}
           </Box>
 
