@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import HeaderLogo from "./HeaderLogo";
 import ThemeToggleButton from "./ThemeToggleButton";
+import "/src/assets/styles/components/header.scss";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -37,7 +38,7 @@ function Header() {
   };
 
   return (
-    <AppBar sx={{ backgroundColor: "background.default" }} position="static">
+    <AppBar id="header" sx={{ backgroundColor: "background.default" }} position="static">
       <Container sx={{ paddingBlock: "0.1rem" }} maxWidth="xl">
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
