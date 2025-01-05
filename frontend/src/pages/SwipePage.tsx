@@ -1,5 +1,18 @@
+import { Container } from "@mui/material";
+
 function SwipePage() {
-  return <div>SwipePage</div>;
+  return (
+    <Container
+      maxWidth="md"
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        paddingTop: "5rem"
+      }}
+    >
+      Swipe page
+    </Container>
+  );
 }
 
 export default SwipePage;
