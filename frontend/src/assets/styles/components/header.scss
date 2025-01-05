@@ -1,4 +1,11 @@
-#header {
-  position: sticky;
+#app-header {
   inset: 0% 0% auto;
+  margin: 0;
+  padding-inline: 0;
+  padding-block: 0.5rem;
+}
+
+#app-header * {
+  min-height: 0;
+  max-width: none;
 }

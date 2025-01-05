@@ -38,21 +38,20 @@ function Header() {
   };
 
   return (
-    <AppBar id="header" sx={{ backgroundColor: "background.default" }} position="static">
-      <Container sx={{ paddingBlock: "0.1rem" }} maxWidth="xl">
+    <AppBar id="app-header" position="sticky" sx={{ backgroundColor: "background.default" }}>
+      <Container>
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", sm: "flex", md: "none" } }}>
             <IconButton
-              size="large"
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="info"
             >
-              <MenuIcon />
+              <MenuIcon sx={{ fontSize: "1.8rem" }} />
             </IconButton>
 
             <Menu
