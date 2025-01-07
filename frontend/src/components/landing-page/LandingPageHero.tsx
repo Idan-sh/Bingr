@@ -2,7 +2,7 @@ import { Typography, Button, Container, Box } from "@mui/material";
 import { motion } from "motion/react";
 
 function LandingPageHero() {
-  const delayInterval = 0.5;
+  const delayInterval = 0.4;
   const distance = 100;
 
   return (
