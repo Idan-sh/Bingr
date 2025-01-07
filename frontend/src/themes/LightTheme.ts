@@ -27,6 +27,7 @@ export const lightTheme = createTheme({
     },
   },
   typography: {
+    fontFamily:  "Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     allVariants: {
         color: "#232323"
     },

@@ -28,6 +28,7 @@ export const darkTheme = createTheme({
     },
     },
     typography: {
+        fontFamily:  "Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
         allVariants: {
             color: "#d9d7ce"
         },

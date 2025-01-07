@@ -1,5 +1,5 @@
 import { createContext, useState, useMemo, useContext, ReactNode } from "react";
-import { ThemeProvider as MuiThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider, CssBaseline, Box } from "@mui/material";
 import { lightTheme } from "../themes/LightTheme";
 import { darkTheme } from "../themes/DarkTheme";
 import { mainColorsTheme } from "../themes/MainColorsTheme";
@@ -39,7 +39,16 @@ export const AppThemeProvider = ({ children }: AppThemeProviderProps) => {
     <ThemeContext.Provider value={{ currentTheme, toggleTheme }}>
       <MuiThemeProvider theme={theme}>
         <CssBaseline />
-        {children}
+        <Box
+          sx={{
+            backgroundColor: theme.palette.background.default,
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column"
+          }}
+        >
+          {children}
+        </Box>
       </MuiThemeProvider>
     </ThemeContext.Provider>
   );
