@@ -1,18 +1,17 @@
-import { Container } from "@mui/material";
-import constructionIcon from "/imgs/building.png";
+import { Box } from "@mui/material";
+import { motion } from "framer-motion";
+import "/src/assets/styles/pages/landing-page.scss";
+import LandingPageHero from "../components/landing-page/LandingPageHero";
+import LandingPageTrending from "../components/landing-page/LandingPageTrending";
+import LandingPageCallToAction from "../components/landing-page/LandingPageCallToAction";
 
 function LandingPage() {
   return (
-    <Container
-      maxWidth="md"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        paddingTop: "5rem"
-      }}
-    >
-      <img width="30%" src={constructionIcon} />
-    </Container>
+    <Box>
+      <LandingPageHero />
+      <LandingPageTrending />
+      <LandingPageCallToAction />
+    </Box>
   );
 }
 
