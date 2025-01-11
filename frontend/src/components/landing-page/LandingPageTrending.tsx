@@ -26,9 +26,10 @@ function LandingPageTrending() {
       className="landing-page-trending"
       sx={{
         width: "100%",
+        height: "fit-content",
         paddingTop: "1rem",
         paddingBottom: "6rem",
-        paddingInline: "10rem",
+        paddingInline: { xs: "4rem", sm: "8rem", md: "10rem" },
         backgroundColor: "primary.main"
       }}
     >
@@ -42,10 +43,31 @@ function LandingPageTrending() {
       </Typography>
       <Grid2 container spacing={3} justifyContent="center">
         {recommendations.map((rec, index) => (
-          <Grid2 key={index} size={{ xs: 12, sm: 6, md: 4 }}>
-            <Card sx={{ height: "100%", backgroundColor: "background.paper", boxShadow: 3 }}>
-              <CardMedia component="img" height="200" image={rec.image} alt={rec.title} />
-              <CardContent>
+          <Grid2 key={index} size={{ xs: 20, sm: 6, md: 4 }}>
+            <Card
+              sx={{
+                borderRadius: "20px",
+                backgroundColor: "background.paper",
+                boxShadow: 3
+              }}
+            >
+              <CardMedia
+                component="img"
+                draggable="false"
+                height="300px"
+                image={rec.image}
+                alt={rec.title}
+              />
+              <CardContent
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  padding: 2,
+                  margin: "auto 0"
+                }}
+              >
                 <Typography variant="h6" color="text.secondary" gutterBottom>
                   {rec.title}
                 </Typography>

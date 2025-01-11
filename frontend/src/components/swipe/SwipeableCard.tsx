@@ -61,13 +61,7 @@ function SwipeableCard({ title, description, imageUrl, onSwipe, style }: Swipeab
         }}
       >
         <Box height="90%" position="relative">
-          <CardMedia
-            component="img"
-            height="100%"
-            draggable="false"
-            image={imageUrl}
-            alt={title}
-          ></CardMedia>
+          <CardMedia component="img" height="100%" draggable="false" image={imageUrl} alt={title} />
           <Typography
             variant="h5"
             color="primary.main"
