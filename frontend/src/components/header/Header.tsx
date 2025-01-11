@@ -13,23 +13,24 @@ import MenuItem from "@mui/material/MenuItem";
 import HeaderLogo from "./HeaderLogo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import "/src/assets/styles/components/header.scss";
+import { Collapse } from "@mui/material";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const pages = ["Swipe", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const navigate = useNavigate();
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
   };
+
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -42,47 +43,22 @@ function Header() {
         <Toolbar className="header-tool-bar" disableGutters>
           <HeaderLogo display={{ xs: "none", sm: "none", md: "flex" }} />
 
+          {/* Mobile Menu */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", sm: "flex", md: "none" } }}>
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+              onClick={toggleMenu}
               color="info"
             >
               <MenuIcon sx={{ fontSize: "1.8rem" }} />
             </IconButton>
-
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left"
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left"
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: "block", md: "none" } }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography
-                    sx={{ textAlign: "center", fontSize: "1rem", color: "text.secondary" }}
-                  >
-                    {page}
-                  </Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
 
           <HeaderLogo flexGrow={1} display={{ xs: "flex", sm: "flex", md: "none" }} />
 
+          {/* Desktop Menu */}
           <Box sx={{ ml: 4, flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               <Typography
@@ -91,7 +67,6 @@ function Header() {
                 component="a"
                 color="info"
                 key={page}
-                onClick={handleCloseNavMenu}
                 href={`/${page}`}
                 sx={{
                   mr: 6,
@@ -141,6 +116,31 @@ function Header() {
             </Menu>
           </Box>
         </Toolbar>
+
+        {/* Collapsible Menu */}
+        <Collapse in={isMenuOpen} timeout="auto" unmountOnExit>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              backgroundColor: "background.default",
+              padding: "0.8rem 1rem 0.2rem 1rem"
+            }}
+          >
+            {pages.map((page, index) => (
+              <MenuItem
+                key={page}
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  navigate(`/${page}`);
+                }}
+                sx={{ borderBottom: index === pages.length - 1 ? "none" : "1px solid gray" }}
+              >
+                <Typography sx={{ fontSize: "1.4rem" }}>{page}</Typography>
+              </MenuItem>
+            ))}
+          </Box>
+        </Collapse>
       </Container>
     </AppBar>
   );
