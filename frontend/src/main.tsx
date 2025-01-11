@@ -6,6 +6,7 @@ import Header from "./components/header/Header.tsx";
 import { AppThemeProvider } from "./context/ThemeProvider.tsx";
 import "./assets/styles/setup/main.scss";
 import SwipePage from "./pages/SwipePage.tsx";
+import Footer from "./components/footer/Footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -16,6 +17,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/*" element={<LandingPage />} />
           <Route path="/swipe" element={<SwipePage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </AppThemeProvider>
   </StrictMode>
