@@ -33,7 +33,7 @@ function Footer() {
                 Features
               </Link>
               <Link
-                href="#"
+                href="/swipe"
                 color="inherit"
                 underline="hover"
                 sx={{ display: "block", marginBottom: "0.5rem" }}
@@ -41,7 +41,7 @@ function Footer() {
                 Swipe
               </Link>
               <Link href="#" color="inherit" underline="hover" sx={{ display: "block" }}>
-                Something Else
+                Browse
               </Link>
             </Box>
           </Grid2>
@@ -52,20 +52,12 @@ function Footer() {
             </Typography>
             <Box>
               <Link
-                href="#"
+                href="/about-us"
                 color="inherit"
                 underline="hover"
                 sx={{ display: "block", marginBottom: "0.5rem" }}
               >
                 About Us
-              </Link>
-              <Link
-                href="#"
-                color="inherit"
-                underline="hover"
-                sx={{ display: "block", marginBottom: "0.5rem" }}
-              >
-                Sustainability
               </Link>
               <Link href="#" color="inherit" underline="hover" sx={{ display: "block" }}>
                 Something Else
