@@ -74,7 +74,11 @@ function Header() {
                   fontSize: "1.1rem",
                   fontWeight: 400,
                   textDecoration: "none",
-                  textTransform: "uppercase"
+                  textTransform: "uppercase",
+                  "&:hover ": {
+                    color: "primary.main",
+                    textDecoration: "underline"
+                  }
                 }}
               >
                 {page}
