@@ -17,7 +17,7 @@ import { Collapse } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const pages = ["Swipe", "Pricing", "Blog"];
+const pages = ["swipe", "browse", "pricing", "blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function Header() {

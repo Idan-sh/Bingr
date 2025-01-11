@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Grid2, Card, CardMedia, Avatar, Divider } from "@mui/material";
+import { Box, Container, Typography, Grid2, Card, Avatar, Divider } from "@mui/material";
 import AboutUsFavoritesMoviesShows from "../components/about-us/AboutUsFavoritesMoviesShows";
 
 interface TeamMember {
