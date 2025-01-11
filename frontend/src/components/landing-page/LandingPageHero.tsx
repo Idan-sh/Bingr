@@ -73,7 +73,7 @@ function LandingPageHero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: delayInterval * 6 }}
+        transition={{ duration: 1, delay: delayInterval * 5 }}
       >
         <Typography variant="h6" sx={{ marginTop: "3rem" }}>
           Your personal matchmaker for movies and TV shows!
