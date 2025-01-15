@@ -7,15 +7,12 @@ export class AuthController {
 
     @Post('register')
     register(){
-        return {
-            message : "endpoint not implemented",
-        };
+        return this.authService.register();
     }
 
     @Post('login')
     login(){
-        return{
-            message : "endpoint not implemented",
-        };
+        return this.authService.login();
     }
+    
 }
