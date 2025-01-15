@@ -1,3 +1,6 @@
+// Use npm run start:dev to run NestJS server.
+// Once NestJS server is running use http://{host}:8000/api to access API documentation
+
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
