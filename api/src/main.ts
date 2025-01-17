@@ -8,8 +8,15 @@ import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.useGlobalPipes(new ValidationPipe());
 
+  // Enable validators for body parameters
+  app.useGlobalPipes(
+    new ValidationPipe({
+      whitelist: true, // Ignore body parameters not in DTOs
+    }),
+  );
+
+  // COnfigure swagger
   const config = new DocumentBuilder()
     .setTitle('Bingr')
     .setDescription('Bingr API documentation')
