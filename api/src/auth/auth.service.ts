@@ -4,6 +4,7 @@ import { RegisterDto } from './dto/register.dto';
 import { LoginDto } from './dto/login.dto';
 import * as argon from 'argon2';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
+import { ApiUriTooLongResponse } from '@nestjs/swagger';
 
 @Injectable()
 export class AuthService {
@@ -38,9 +39,26 @@ export class AuthService {
     }
   }
 
-  login(dto: LoginDto) {
-    return {
-      message: 'endpoint not implemented',
-    };
+  async login(dto: LoginDto) {
+    // find user by email
+    const user = await this.prisma.user.findUnique({
+      where: {
+        email: dto.email,
+      },
+    });
+
+    // if user doesn't exist throw exception
+    if (!user) throw new ForbiddenException(`Email doesn't exist`);
+
+    // compare passwords
+    const pwMatch = await argon.verify(user.password_hash, dto.password);
+
+    // if password is incorrect, throw exception
+    if (!pwMatch) throw new ForbiddenException('Password incorrect');
+
+    // Transform user object to exclude password_hash field
+    const { password_hash, ...userWithoutPassword } = user;
+
+    return userWithoutPassword;
   }
 }
