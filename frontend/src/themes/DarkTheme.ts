@@ -46,5 +46,39 @@ export const darkTheme = createTheme({
                 },
             },
         },
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "gray",
+                    },
+                    "&:hover .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#ff0084",
+                    },
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "#0967e7",
+                    },
+                },
+            },
+        },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                color: "gray",
+                "&.Mui-focused": {
+                        color: "#0967e7", // Label color when focused
+                    },
+                },
+            },
+        },
+        MuiFormControl: {
+            styleOverrides: {
+                root: {
+                    "&:hover .MuiInputLabel-root:not(.Mui-focused)": {
+                        color: "#ff0084", // Label color when parent is hovered
+                    },
+                },
+            },
+        },
     },
 });

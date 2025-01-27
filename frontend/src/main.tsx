@@ -9,6 +9,7 @@ import SwipePage from "./pages/SwipePage.tsx";
 import Footer from "./components/footer/Footer.tsx";
 import AboutUsPage from "./pages/AboutUsPage.tsx";
 import BrowsePage from "./pages/BrowsePage.tsx";
+import LoginPage from "./pages/LoginPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/swipe" element={<SwipePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/browse" element={<BrowsePage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
