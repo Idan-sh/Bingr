@@ -44,9 +44,8 @@ function LoginPage() {
         animate={{ x: 0 }} // Animate to the center
         exit={{ x: isLogin ? "100%" : "-100%" }} // Exit to the opposite direction
         transition={{
-          type: "spring", // Use a spring animation for bounce
-          stiffness: 120, // Controls the bounciness
-          damping: 10 // Reduces overshooting
+          duration: 0.4,
+          ease: "easeInOut"
         }}
         alignContent="center"
         sx={{

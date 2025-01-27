@@ -13,9 +13,9 @@ import MenuItem from "@mui/material/MenuItem";
 import HeaderLogo from "./HeaderLogo";
 import ThemeToggleButton from "./ThemeToggleButton";
 import "/src/assets/styles/components/header.scss";
-import { Collapse } from "@mui/material";
+import { Button, Collapse } from "@mui/material";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const pages = ["swipe", "browse", "pricing", "blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -87,6 +87,10 @@ function Header() {
           </Box>
 
           <ThemeToggleButton />
+
+          <Button component={Link} to="/login" variant="outlined" sx={{ mr: 2 }}>
+            Login
+          </Button>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
