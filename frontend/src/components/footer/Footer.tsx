@@ -75,8 +75,8 @@ function Footer() {
               >
                 About Us
               </Link>
-              <Link href="#" color="inherit" underline="hover" sx={{ display: "block" }}>
-                Something Else
+              <Link href="/contact" color="inherit" underline="hover" sx={{ display: "block" }}>
+                Contact Us
               </Link>
             </Box>
           </Grid2>
