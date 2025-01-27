@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Container, Typography, TextField, Button, Link } from "@mui/material";
+import { Box, Typography, TextField, Button, Link } from "@mui/material";
 import { motion } from "motion/react";
 
 function LoginPage() {
@@ -52,8 +52,8 @@ function LoginPage() {
         sx={{
           backgroundColor: "background.default",
           height: "100%",
-          width: { xs: "100%", sm: "70%", md: "60%" },
-          padding: "2rem",
+          width: { xs: "100%", sm: "100%", md: "60%" },
+          padding: { xs: "10%", sm: "20%", md: "12%" },
           textAlign: "center"
         }}
       >
