@@ -23,10 +23,10 @@ function LoginPage() {
         justifyContent: "center"
       }}
     >
-      <Box width="60%">
+      <Box width={{ xs: "90%", sm: "100%", md: "60%" }}>
         <Container
-          maxWidth="sm"
           sx={{
+            width: { xs: "100%", sm: "70%", md: "60%" },
             padding: "2rem",
             textAlign: "center"
           }}
@@ -96,7 +96,14 @@ function LoginPage() {
           </Typography>
         </Container>
       </Box>
-      <Box width="40%" height="100%" sx={{ backgroundColor: "background.paper" }}></Box>
+      <Box
+        width="40%"
+        height="100%"
+        sx={{
+          display: { xs: "none", sm: "none", md: "block" },
+          backgroundColor: "background.paper"
+        }}
+      ></Box>
     </Box>
   );
 }
