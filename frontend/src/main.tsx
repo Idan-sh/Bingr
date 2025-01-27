@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer.tsx";
 import AboutUsPage from "./pages/AboutUsPage.tsx";
 import BrowsePage from "./pages/BrowsePage.tsx";
 import LoginPage from "./pages/LoginPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,11 +18,12 @@ createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/*" element={<LandingPage />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/swipe" element={<SwipePage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
