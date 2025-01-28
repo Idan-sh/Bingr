@@ -31,7 +31,7 @@ function PricingPage() {
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = direction === "left" ? -300 : 300;
+      const scrollAmount = direction === "left" ? -430 : 430;
       scrollContainerRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -46,10 +46,24 @@ function PricingPage() {
         justifyContent: "center",
         backgroundColor: "background.default",
         color: "text.primary",
-        padding: "2rem",
         gap: "1rem"
       }}
     >
+      {/* Title */}
+      <Typography
+        variant="h4"
+        fontWeight="bold"
+        alignSelf="flex-start"
+        paddingInline="4rem"
+        sx={{
+          marginBottom: "2rem",
+          fontSize: { xs: "1.8rem", sm: "2.4rem" },
+          color: "primary.main"
+        }}
+      >
+        Choose the Plan That Works Best for You:
+      </Typography>
+
       {/* Scrollable Cards */}
       <Box
         ref={scrollContainerRef}
@@ -58,7 +72,8 @@ function PricingPage() {
           gap: 10,
           overflowX: "auto",
           scrollBehavior: "smooth",
-          padding: "1rem",
+          paddingBox: "1rem",
+          paddingInline: 10,
           maxWidth: "100%",
           "&::-webkit-scrollbar": { display: "none" } // Hide scrollbar for a cleaner look
         }}
