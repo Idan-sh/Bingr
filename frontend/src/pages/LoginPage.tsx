@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Box, Typography, TextField, Button, Link } from "@mui/material";
-import { motion } from "motion/react";
 
 function LoginPage() {
   const [isLogin, setIsSignIn] = useState(true);
@@ -28,32 +27,26 @@ function LoginPage() {
   return (
     <Box
       sx={{
+        position: "relative",
         color: "text.primary",
         backgroundColor: "background.paper",
         height: "calc(100vh - 3.9rem)",
         width: "100%",
         display: "flex",
-        overflow: "hidden",
-        justifyContent: isLogin ? "flex-start" : "flex-end"
+        overflow: "hidden"
       }}
     >
       <Box
-        component={motion.div}
-        key={isLogin ? "login" : "signup"}
-        initial={{ x: isLogin ? "-100%" : "100%" }} // Start position based on the state
-        animate={{ x: 0 }} // Animate to the center
-        exit={{ x: isLogin ? "100%" : "-100%" }} // Exit to the opposite direction
-        transition={{
-          duration: 0.4,
-          ease: "easeInOut"
-        }}
         alignContent="center"
         sx={{
+          position: "absolute",
           backgroundColor: "background.default",
           height: "100%",
           width: { xs: "100%", sm: "100%", md: "60%" },
           padding: { xs: "10%", sm: "20%", md: "12%" },
-          textAlign: "center"
+          textAlign: "center",
+          left: isLogin ? "0" : { xs: 0, sm: 0, md: "40%" },
+          transition: "left 0.5s ease-in"
         }}
       >
         {/* Title */}
