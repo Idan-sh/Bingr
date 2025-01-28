@@ -1,17 +1,17 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage.tsx";
+import LandingPage from "./pages/product/LandingPage.tsx";
 import Header from "./components/header/Header.tsx";
 import { AppThemeProvider } from "./context/ThemeProvider.tsx";
 import "./assets/styles/setup/main.scss";
-import SwipePage from "./pages/SwipePage.tsx";
+import SwipePage from "./pages/swipe/SwipePage.tsx";
 import Footer from "./components/footer/Footer.tsx";
-import AboutUsPage from "./pages/AboutUsPage.tsx";
-import BrowsePage from "./pages/BrowsePage.tsx";
-import LoginPage from "./pages/LoginPage.tsx";
-import NotFoundPage from "./pages/NotFoundPage.tsx";
-import ContactPage from "./pages/ContactPage.tsx";
+import AboutUsPage from "./pages/product/AboutUsPage.tsx";
+import BrowsePage from "./pages/swipe/BrowsePage.tsx";
+import LoginPage from "./pages/auth/LoginPage.tsx";
+import NotFoundPage from "./pages/error/NotFoundPage.tsx";
+import ContactPage from "./pages/company/ContactPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

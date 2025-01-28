@@ -1,5 +1,5 @@
 import { Box, Container } from "@mui/material";
-import CardDeck from "../components/swipe/CardDeck";
+import CardDeck from "../../components/swipe/CardDeck";
 
 function SwipePage() {
   return (
