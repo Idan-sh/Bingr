@@ -1,8 +1,9 @@
 import { Typography, Button, Container, Box } from "@mui/material";
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 function LandingPageHero() {
-  const delayInterval = 0.4;
+  const delayInterval = 0.3;
   const distance = 100;
 
   return (
@@ -81,7 +82,7 @@ function LandingPageHero() {
         <Typography variant="h6" sx={{ marginBottom: "2rem" }}>
           Swipe your way to the perfect entertainment, tailored just for you.
         </Typography>
-        <Button variant="contained" color="primary" size="large">
+        <Button component={Link} to="/login" variant="contained" color="primary" size="large">
           Get Started
         </Button>
       </motion.div>

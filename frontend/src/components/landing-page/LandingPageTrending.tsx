@@ -27,8 +27,8 @@ function LandingPageTrending() {
       sx={{
         width: "100%",
         height: "fit-content",
-        paddingTop: "1rem",
-        paddingBottom: "6rem",
+        paddingTop: "6rem",
+        paddingBottom: "12rem",
         paddingInline: { xs: "4rem", sm: "8rem", md: "10rem" },
         backgroundColor: "primary.main"
       }}

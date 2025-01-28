@@ -1,4 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 function LandingPageCallToAction() {
   return (
@@ -10,7 +11,17 @@ function LandingPageCallToAction() {
         Sign up now to start discovering and matching with movies and TV shows tailored to your
         taste.
       </Typography>
-      <Button variant="contained" color="secondary" size="large" sx={{ marginTop: 2 }}>
+      <Button
+        component={Link}
+        to={{
+          pathname: "/login", // The target path
+          search: "?action=signup" // The query parameters
+        }}
+        variant="contained"
+        color="secondary"
+        size="large"
+        sx={{ marginTop: 2 }}
+      >
         Sign Up
       </Button>
     </Box>

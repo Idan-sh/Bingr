@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Box, Typography, TextField, Button, Link } from "@mui/material";
+import { useSearchParams } from "react-router-dom";
 
 function LoginPage() {
-  const [isLogin, setIsSignIn] = useState(true);
+  const [searchParams] = useSearchParams();
+  const action = searchParams.get("action");
+  const [isLogin, setIsSignIn] = useState(action === "signup" ? false : true); // Set isLogin to true only if the action is not signup (the default action is login)
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
