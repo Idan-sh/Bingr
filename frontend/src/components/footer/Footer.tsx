@@ -5,6 +5,17 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 
+const productPages = [
+  { name: "Features", href: "features" },
+  { name: "Swipe", href: "swipe" },
+  { name: "Browse", href: "browse" }
+];
+const companyPages = [
+  { name: "About Us", href: "about-us" },
+  { name: "Contact Us", href: "contact" }
+];
+const communityPages = [{ name: "Blog", href: "blog" }];
+
 function Footer() {
   return (
     <ThemeProvider theme={footerTheme}>
@@ -40,25 +51,16 @@ function Footer() {
               PRODUCT
             </Typography>
             <Box>
-              <Link
-                href="/features"
-                color="inherit"
-                underline="hover"
-                sx={{ display: "block", marginBottom: "0.5rem" }}
-              >
-                Features
-              </Link>
-              <Link
-                href="/swipe"
-                color="inherit"
-                underline="hover"
-                sx={{ display: "block", marginBottom: "0.5rem" }}
-              >
-                Swipe
-              </Link>
-              <Link href="/browse" color="inherit" underline="hover" sx={{ display: "block" }}>
-                Browse
-              </Link>
+              {productPages.map((page) => (
+                <Link
+                  href={`/${page.href}`}
+                  color="inherit"
+                  underline="hover"
+                  sx={{ display: "block", marginBottom: "0.5rem" }}
+                >
+                  {page.name}
+                </Link>
+              ))}
             </Box>
           </Grid2>
 
@@ -67,17 +69,16 @@ function Footer() {
               COMPANY
             </Typography>
             <Box>
-              <Link
-                href="/about-us"
-                color="inherit"
-                underline="hover"
-                sx={{ display: "block", marginBottom: "0.5rem" }}
-              >
-                About Us
-              </Link>
-              <Link href="/contact" color="inherit" underline="hover" sx={{ display: "block" }}>
-                Contact Us
-              </Link>
+              {companyPages.map((page) => (
+                <Link
+                  href={`/${page.href}`}
+                  color="inherit"
+                  underline="hover"
+                  sx={{ display: "block", marginBottom: "0.5rem" }}
+                >
+                  {page.name}
+                </Link>
+              ))}
             </Box>
           </Grid2>
 
@@ -86,9 +87,16 @@ function Footer() {
               COMMUNITY
             </Typography>
             <Box>
-              <Link href="/blog" color="inherit" underline="hover" sx={{ display: "block" }}>
-                Blog
-              </Link>
+              {communityPages.map((page) => (
+                <Link
+                  href={`/${page.href}`}
+                  color="inherit"
+                  underline="hover"
+                  sx={{ display: "block" }}
+                >
+                  {page.name}
+                </Link>
+              ))}
             </Box>
           </Grid2>
         </Grid2>

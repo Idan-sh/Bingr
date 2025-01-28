@@ -12,6 +12,7 @@ import BrowsePage from "./pages/swipe/BrowsePage.tsx";
 import LoginPage from "./pages/auth/LoginPage.tsx";
 import NotFoundPage from "./pages/error/NotFoundPage.tsx";
 import ContactPage from "./pages/company/ContactPage.tsx";
+import PricingPage from "./pages/product/PricingPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -25,6 +26,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
